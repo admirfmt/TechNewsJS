@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article – TechNews</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="js/article.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- NAVBAR -->
+  <header class="bg-white border-b-2 border-gray-200 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-bold text-teal-700">TechNews</a>
+
+      <input type="checkbox" id="hamburger-check" class="hidden peer">
+      <label for="hamburger-check" class="flex md:hidden flex-col gap-1.5 cursor-pointer p-1">
+        <span class="block w-6 h-0.5 bg-teal-700"></span>
+        <span class="block w-6 h-0.5 bg-teal-700"></span>
+        <span class="block w-6 h-0.5 bg-teal-700"></span>
+      </label>
+
+      <nav class="hidden peer-checked:flex md:flex flex-col md:flex-row gap-1
+        absolute md:static top-full left-0 w-full md:w-auto
+        bg-white md:bg-transparent border-b-2 md:border-none border-gray-200
+        px-4 md:px-0 py-2 md:py-0 z-40">
+        <a href="index.html" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">Home</a>
+        <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">Technology</a>
+        <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">AI &amp; Future</a>
+        <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">Gaming</a>
+        <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">Science</a>
+        <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">Hardware</a>
+        <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">Security</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ARTICLE PAGE CONTENT -->
+  <div class="max-w-2xl mx-auto px-6 py-10">
+
+    <!-- Back link -->
+    <a href="index.html" class="inline-flex items-center gap-2 text-sm text-teal-700 font-semibold mb-8 hover:underline">
+      &#8592; Back
+    </a>
+
+    <!-- Article body -->
+    <article id="article-body"></article>
+
+    <!-- Likes / Dislikes -->
+    <div id="reactions" class="reactions-bar"></div>
+
+    <!-- Comments section -->
+    <section id="comments-section" class="comments-section">
+      <h2 class="comments-title">Comments</h2>
+
+      <!-- Comment form -->
+      <form id="comment-form" class="comment-form">
+        <input
+          type="text"
+          id="comment-author"
+          placeholder="Your name"
+          maxlength="60"
+        >
+        <textarea
+          id="comment-text"
+          rows="3"
+          placeholder="Write a comment..."
+        ></textarea>
+        <button type="submit" class="btn-primary">Post Comment</button>
+      </form>
+
+      <!-- Comment list -->
+      <div id="comment-list"></div>
+
+      <div id="no-comments" class="no-comments">No comments yet. Be the first!</div>
+    </section>
+
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast-container"></div>
+
+</body>
+</html>

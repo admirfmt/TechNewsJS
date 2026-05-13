@@ -166,7 +166,7 @@ img {
     color: #999;
 }
 
-/* --- Tablet --- */
+/* ---------- Tablet ---------- */
 @media (max-width: 1099px) {
 
     .article-featured img {
@@ -175,7 +175,7 @@ img {
 
 }
   
-/* --- Mobile --- */
+/* ---------- Mobile ---------- */
 @media (max-width: 599px) {
   
     .article-featured img {
@@ -213,16 +213,18 @@ img {
     white-space: nowrap;
     flex-shrink: 0;
     transition: background 0.15s, color 0.15s, border-color 0.15s;
-}
+  }
   
-.delete-btn:hover {
+  .delete-btn:hover {
     background: #fff1f1;
     color: #e53e3e;
     border-color: #e53e3e;
-}
+  }
   
-/* --- Modal --- */
-.modal-overlay {
+  /* ================================
+     MODAL
+     ================================ */
+  .modal-overlay {
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.45);
@@ -231,68 +233,68 @@ img {
     align-items: center;
     justify-content: center;
     padding: 16px;
-}
-
-.modal-overlay.hidden { display: none; }
-
-.modal-box {
+  }
+  
+  .modal-overlay.hidden { display: none; }
+  
+  .modal-box {
     background: #fff;
     border-radius: 8px;
     width: 100%;
     max-width: 520px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.18);
     overflow: hidden;
-}
-
-.modal-header {
+  }
+  
+  .modal-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 24px 16px;
     border-bottom: 1px solid #eee;
-}
-
-.modal-title {
+  }
+  
+  .modal-title {
     font-size: 18px;
     font-weight: 700;
     color: #222;
-}
-
-.modal-close {
+  }
+  
+  .modal-close {
     background: none;
     border: none;
     font-size: 24px;
     color: #aaa;
     cursor: pointer;
     line-height: 1;
-}
-
-.modal-close:hover { color: #333; }
-
-#article-form {
+  }
+  
+  .modal-close:hover { color: #333; }
+  
+  #article-form {
     padding: 20px 24px 24px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-}
-
-.form-group {
+  }
+  
+  .form-group {
     display: flex;
     flex-direction: column;
     gap: 6px;
-}
-
-.form-group label {
+  }
+  
+  .form-group label {
     font-size: 13px;
     font-weight: 600;
     color: #444;
-}
-
-.required { color: #e53e3e; }
-
-.form-group input,
-.form-group textarea,
-.form-group select {
+  }
+  
+  .required { color: #e53e3e; }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
     width: 100%;
     padding: 9px 12px;
     border: 1px solid #ddd;
@@ -302,26 +304,26 @@ img {
     color: #222;
     background: #fafafa;
     transition: border-color 0.15s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
     outline: none;
     border-color: #005f63;
     background: #fff;
-}
-
-.form-group textarea { resize: vertical; min-height: 110px; }
-
-.modal-actions {
+  }
+  
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  
+  .modal-actions {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
     margin-top: 4px;
-}
-
-.btn-primary {
+  }
+  
+  .btn-primary {
     background: #005f63;
     color: #fff;
     border: none;
@@ -331,11 +333,11 @@ img {
     font-weight: 600;
     cursor: pointer;
     transition: background 0.15s;
-}
-
-.btn-primary:hover { background: #004a4d; }
-
-.btn-secondary {
+  }
+  
+  .btn-primary:hover { background: #004a4d; }
+  
+  .btn-secondary {
     background: none;
     color: #666;
     border: 1px solid #ddd;
@@ -345,12 +347,14 @@ img {
     font-weight: 600;
     cursor: pointer;
     transition: background 0.15s;
-}
-
-.btn-secondary:hover { background: #f5f5f5; }
-
-/* -- Toast -- */
-#toast-container {
+  }
+  
+  .btn-secondary:hover { background: #f5f5f5; }
+  
+  /* ================================
+     TOAST NOTIFICATIONS
+     ================================ */
+  #toast-container {
     position: fixed;
     bottom: 24px;
     right: 24px;
@@ -358,9 +362,9 @@ img {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-.toast {
+  }
+  
+  .toast {
     min-width: 240px;
     max-width: 320px;
     padding: 12px 18px;
@@ -372,22 +376,160 @@ img {
     opacity: 0;
     transform: translateY(12px);
     animation: toast-in 0.25s forwards, toast-out 0.3s 2.7s forwards;
-}
-
-.toast.success { background: #005f63; }
-.toast.error   { background: #e53e3e; }
-.toast.info    { background: #3182ce; }
-
-@keyframes toast-in {
+  }
+  
+  .toast.success { background: #005f63; }
+  .toast.error   { background: #e53e3e; }
+  .toast.info    { background: #3182ce; }
+  
+  @keyframes toast-in {
     to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes toast-out {
+  }
+  
+  @keyframes toast-out {
     to { opacity: 0; transform: translateY(12px); }
+  }
+/* ================================
+   ARTICLE DETAIL PAGE
+   ================================ */
+.article-full-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.25;
+  margin: 8px 0 12px;
 }
 
-/* --- Dynamic card header --- */
-.dynamic-article-card {
+.article-full-meta {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.article-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin-bottom: 24px;
+}
+
+.article-full-content {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+/* ── Reactions ── */
+.reactions-bar {
+  display: flex;
+  gap: 12px;
+  margin: 32px 0 0;
+  padding: 20px 0;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.reaction-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.like-btn:hover    { background: #f0fdf4; border-color: #22c55e; color: #16a34a; }
+.dislike-btn:hover { background: #fff1f1; border-color: #e53e3e; color: #e53e3e; }
+
+/* ── Comments ── */
+.comments-section {
+  margin-top: 40px;
+}
+
+.comments-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #005f63;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #222;
+  background: #fafafa;
+  transition: border-color 0.15s;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+  outline: none;
+  border-color: #005f63;
+  background: #fff;
+}
+
+.comment-form textarea { resize: vertical; min-height: 80px; }
+
+.comment-item {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.comment-author {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222;
+}
+
+.comment-date {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.comment-text {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.no-comments {
+  font-size: 14px;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ── Dynamic card classes ── */
+.dyn-article-card {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -398,7 +540,7 @@ img {
   gap: 8px;
 }
 
-.dynamic-card-header {
+.dyn-card-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
