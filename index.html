@@ -7,6 +7,7 @@
     <title>TechNews</title>
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/main.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -47,174 +48,19 @@
     <div class="max-w-5xl mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
         <!-- MAIN CONTENT -->
         <main class="main">
-            <div class="main-inner">
-
+            <!-- Create article button -->
+            <div class="flex items-center justify-between mb-6">
                 <h2 class="section-title">Latest News</h2>
-
-                <!-- Featured article -->
-                <article class="article-featured">
-                    <img src="assets/alphanet3.webp" alt="Quantum computer" width="800" height="400">
-                    <div class="article-featured-body">
-                        <span class="article-category">AI &amp; Future</span>
-                        <h3 class="article-title">
-                            <a href="#">Google DeepMind Unveils AlphaNet 3 — Solves Protein Folding in Seconds</a>
-                        </h3>
-                        <p class="article-excerpt">
-                            The team behind AlphaFold has taken another giant leap. The third generation
-                            can not only predict protein structures but also design entirely new molecules
-                            tailored for drug development, according to a study published in Nature yesterday.
-                        </p>
-                        <div class="article-meta">
-                            <span class="author">By Erik Lindgren</span>
-                            <span class="dot">·</span>
-                            <span>April 5, 2026</span>
-                            <span class="dot">·</span>
-                            <span>6 min read</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Article grid -->
-                <div class="article-grid">
-
-                    <article class="article-card">
-                        <img src="assets/figure03.jpg" alt="Humanoid robot" width="480" height="270">
-                        <div class="article-card-body">
-                            <span class="article-category">Robotics</span>
-                            <h3 class="article-title">
-                                <a href="#">Figure 03 Demonstrated on Factory Floor — Replaces Three Stations</a>
-                            </h3>
-                            <p class="article-excerpt">
-                                Figure AI showcased its third-generation humanoid robot in a live demo
-                                at BMW's Leipzig plant, completing tasks that previously required three
-                                separate machines.
-                            </p>
-                            <div class="article-meta">
-                                <span class="author">Sara Nilsson</span>
-                                <span class="dot">·</span>
-                                <span>April 4, 2026</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <img src="assets/tsmc.jpg" alt="Close-up of a microchip" width="480" height="270">
-                        <div class="article-card-body">
-                            <span class="article-category">Hardware</span>
-                            <h3 class="article-title">
-                                <a href="#">TSMC Confirms 1nm Process — Mass Production Planned for 2027</a>
-                            </h3>
-                            <p class="article-excerpt">
-                                The Taiwanese semiconductor giant announced that its 1-nanometer process
-                                passed all performance benchmarks. Apple and NVIDIA are said to be
-                                first in line.
-                            </p>
-                            <div class="article-meta">
-                                <span class="author">Johan Ek</span>
-                                <span class="dot">·</span>
-                                <span>April 3, 2026</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <img src="assets/spacex_flyby.jpg" alt="Rocket into space" width="480" height="270">
-                        <div class="article-card-body">
-                            <span class="article-category">Space</span>
-                            <h3 class="article-title">
-                                <a href="#">SpaceX Starship Completes First Crewed Mars Flyby — Returns Safely</a>
-                            </h3>
-                            <p class="article-excerpt">
-                                In a historic moment, six astronauts orbited Mars and returned to Earth
-                                after 47 days, laying the groundwork for a permanent base in 2029.
-                            </p>
-                            <div class="article-meta">
-                                <span class="author">Maya Johansson</span>
-                                <span class="dot">·</span>
-                                <span>April 2, 2026</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="article-card">
-                        <img src="assets/apple_vision_pro.webp" alt="AR glasses" width="480" height="270">
-                        <div class="article-card-body">
-                            <span class="article-category">AR / VR</span>
-                            <h3 class="article-title">
-                                <a href="#">Apple Vision Pro 2 Announced — Half the Weight, Double the Battery</a>
-                            </h3>
-                            <p class="article-excerpt">
-                                The long-awaited follow-up weighs under 300 grams and delivers twelve
-                                hours of use on a single charge. Price drops to $2,499 per leaked specs.
-                            </p>
-                            <div class="article-meta">
-                                <span class="author">Tobias Svensson</span>
-                                <span class="dot">·</span>
-                                <span>April 1, 2026</span>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-
-                <!-- More news -->
-                <h2 class="section-title">More News</h2>
-
-                <div class="article-list">
-
-                    <article class="article-list-item">
-                        <img src="assets/volvo_battery.webp" alt="Electric car" width="160" height="100">
-                        <div class="article-list-body">
-                            <h3 class="article-list-title">
-                                <a href="#">Volvo Cars Unveils Solid-State Battery With 800 km Range</a>
-                            </h3>
-                            <div class="article-list-meta">Technology · March 31, 2026 · 3 min read</div>
-                        </div>
-                    </article>
-
-                    <article class="article-list-item">
-                        <img src="assets/zero_day.jpeg" alt="Digital security" width="160" height="100">
-                        <div class="article-list-body">
-                            <h3 class="article-list-title">
-                                <a href="#">New Zero-Day Vulnerability in Windows 12 Actively Exploited — Patch Now</a>
-                            </h3>
-                            <div class="article-list-meta">Security · March 30, 2026 · 2 min read</div>
-                        </div>
-                    </article>
-
-                    <article class="article-list-item">
-                        <img src="assets/ps6.jpg" alt="Gaming setup" width="160" height="100">
-                        <div class="article-list-body">
-                            <h3 class="article-list-title">
-                                <a href="#">PlayStation 6 Officially Confirmed — Launching November 2026</a>
-                            </h3>
-                            <div class="article-list-meta">Gaming · March 29, 2026 · 2 min read</div>
-                        </div>
-                    </article>
-
-                    <article class="article-list-item">
-                        <img src="assets/gpt_5.webp" alt="AI conversation interface" width="160" height="100">
-                        <div class="article-list-body">
-                            <h3 class="article-list-title">
-                                <a href="#">OpenAI Launches GPT-5 Turbo With Real-Time Browser Integration</a>
-                            </h3>
-                            <div class="article-list-meta">AI · March 28, 2026 · 4 min read</div>
-                        </div>
-                    </article>
-
-                    <article class="article-list-item">
-                        <img src="assets/perovskite.jpg" alt="Solar panels" width="160" height="100">
-                        <div class="article-list-body">
-                            <h3 class="article-list-title">
-                                <a href="#">New Perovskite Solar Cell Breaks Efficiency Record at 41.3%</a>
-                            </h3>
-                            <div class="article-list-meta">Science · March 27, 2026 · 3 min read</div>
-                        </div>
-                    </article>
-
-                </div>
-
+                <button id="open-modal-btn"
+                    class="bg-teal-700 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-teal-800">
+                    + New Article
+                </button>
             </div>
+            <div id="article-container"></div>
+                <div id="empty-state" class="text-center py-16 text-gray-400">
+                    <p class="text-lg font-medium">No articles yet.</p>
+                    <p class="text-sm mt-1">Click <strong>+ New Article</strong> to create one.</p>
+                </div>
         </main>
 
         <aside class="flex flex-col gap-8">
@@ -424,6 +270,45 @@
         </div>
 
     </footer>
+    <!-- Create article modal ===================== -->
+  <div id="modal" class="modal-overlay hidden">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2 class="modal-title">New Article</h2>
+        <button id="close-modal-btn" class="modal-close">&times;</button>
+      </div>
+      <form id="article-form">
+        <div class="form-group">
+          <label for="article-title">Title <span class="required">*</span></label>
+          <input type="text" id="article-title" placeholder="Enter article title" maxlength="120" required>
+        </div>
+        <div class="form-group">
+          <label for="article-content">Content <span class="required">*</span></label>
+          <textarea id="article-content" rows="5" placeholder="Write article content..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="article-category">Category</label>
+          <select id="article-category">
+            <option value="Technology">Technology</option>
+            <option value="AI & Future">AI &amp; Future</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Science">Science</option>
+            <option value="Hardware">Hardware</option>
+            <option value="Security">Security</option>
+            <option value="Space">Space</option>
+            <option value="Opinion">Opinion</option>
+          </select>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="cancel-btn" class="btn-secondary">Cancel</button>
+          <button type="submit" class="btn-primary">Publish Article</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast-container"></div>
 
 </body>
 
