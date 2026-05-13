@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNews</title>
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <!-- NAVBAR -->
+    <header class="bg-white border-b-2 border-gray-200 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between">
+
+            <a href="index.html" class="text-2xl font-bold text-teal-700">TechNews</a>
+
+            <!-- Hidden hamburger checkbox -->
+            <input type="checkbox" id="hamburger-check" class="hidden peer">
+
+            <!-- Show Hamburger button on mobile -->
+            <label for="hamburger-check" class="flex md:hidden flex-col gap-1.5 cursor-pointer p-1">
+                <span class="block w-6 h-0.5 bg-teal-700"></span>
+                <span class="block w-6 h-0.5 bg-teal-700"></span>
+                <span class="block w-6 h-0.5 bg-teal-700"></span>
+            </label>
+
+            <nav class="hidden peer-checked:flex md:flex flex-col md:flex-row gap-1 absolute md:static
+            top-full left-0 w-full md:w-auto bg-white md:bg-transparent border-b-2 md:border-none
+            border-gray-200 px-4 md:px-0 py-2 md:py-0 z-40">
+                <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">Home</a>
+                <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">Technology</a>
+                <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">AI &amp; Future</a>
+                <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">Gaming</a>
+                <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">Science</a>
+                <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">Hardware</a>
+                <a href="#" class="text-sm font-medium text-gray-500 px-3 py-2 rounded hover:bg-gray-100 hover:text-teal-700">Security</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- WRAPPER FOR MAIN CONTENT AND SIDEBAR -->
+    <div class="max-w-5xl mx-auto px-6 py-8 grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
+        <!-- MAIN CONTENT -->
+        <main class="main">
+            <div class="main-inner">
+
+                <h2 class="section-title">Latest News</h2>
+
+                <!-- Featured article -->
+                <article class="article-featured">
+                    <img src="assets/alphanet3.webp" alt="Quantum computer" width="800" height="400">
+                    <div class="article-featured-body">
+                        <span class="article-category">AI &amp; Future</span>
+                        <h3 class="article-title">
+                            <a href="#">Google DeepMind Unveils AlphaNet 3 — Solves Protein Folding in Seconds</a>
+                        </h3>
+                        <p class="article-excerpt">
+                            The team behind AlphaFold has taken another giant leap. The third generation
+                            can not only predict protein structures but also design entirely new molecules
+                            tailored for drug development, according to a study published in Nature yesterday.
+                        </p>
+                        <div class="article-meta">
+                            <span class="author">By Erik Lindgren</span>
+                            <span class="dot">·</span>
+                            <span>April 5, 2026</span>
+                            <span class="dot">·</span>
+                            <span>6 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article grid -->
+                <div class="article-grid">
+
+                    <article class="article-card">
+                        <img src="assets/figure03.jpg" alt="Humanoid robot" width="480" height="270">
+                        <div class="article-card-body">
+                            <span class="article-category">Robotics</span>
+                            <h3 class="article-title">
+                                <a href="#">Figure 03 Demonstrated on Factory Floor — Replaces Three Stations</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                Figure AI showcased its third-generation humanoid robot in a live demo
+                                at BMW's Leipzig plant, completing tasks that previously required three
+                                separate machines.
+                            </p>
+                            <div class="article-meta">
+                                <span class="author">Sara Nilsson</span>
+                                <span class="dot">·</span>
+                                <span>April 4, 2026</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="assets/tsmc.jpg" alt="Close-up of a microchip" width="480" height="270">
+                        <div class="article-card-body">
+                            <span class="article-category">Hardware</span>
+                            <h3 class="article-title">
+                                <a href="#">TSMC Confirms 1nm Process — Mass Production Planned for 2027</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                The Taiwanese semiconductor giant announced that its 1-nanometer process
+                                passed all performance benchmarks. Apple and NVIDIA are said to be
+                                first in line.
+                            </p>
+                            <div class="article-meta">
+                                <span class="author">Johan Ek</span>
+                                <span class="dot">·</span>
+                                <span>April 3, 2026</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="assets/spacex_flyby.jpg" alt="Rocket into space" width="480" height="270">
+                        <div class="article-card-body">
+                            <span class="article-category">Space</span>
+                            <h3 class="article-title">
+                                <a href="#">SpaceX Starship Completes First Crewed Mars Flyby — Returns Safely</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                In a historic moment, six astronauts orbited Mars and returned to Earth
+                                after 47 days, laying the groundwork for a permanent base in 2029.
+                            </p>
+                            <div class="article-meta">
+                                <span class="author">Maya Johansson</span>
+                                <span class="dot">·</span>
+                                <span>April 2, 2026</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="assets/apple_vision_pro.webp" alt="AR glasses" width="480" height="270">
+                        <div class="article-card-body">
+                            <span class="article-category">AR / VR</span>
+                            <h3 class="article-title">
+                                <a href="#">Apple Vision Pro 2 Announced — Half the Weight, Double the Battery</a>
+                            </h3>
+                            <p class="article-excerpt">
+                                The long-awaited follow-up weighs under 300 grams and delivers twelve
+                                hours of use on a single charge. Price drops to $2,499 per leaked specs.
+                            </p>
+                            <div class="article-meta">
+                                <span class="author">Tobias Svensson</span>
+                                <span class="dot">·</span>
+                                <span>April 1, 2026</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- More news -->
+                <h2 class="section-title">More News</h2>
+
+                <div class="article-list">
+
+                    <article class="article-list-item">
+                        <img src="assets/volvo_battery.webp" alt="Electric car" width="160" height="100">
+                        <div class="article-list-body">
+                            <h3 class="article-list-title">
+                                <a href="#">Volvo Cars Unveils Solid-State Battery With 800 km Range</a>
+                            </h3>
+                            <div class="article-list-meta">Technology · March 31, 2026 · 3 min read</div>
+                        </div>
+                    </article>
+
+                    <article class="article-list-item">
+                        <img src="assets/zero_day.jpeg" alt="Digital security" width="160" height="100">
+                        <div class="article-list-body">
+                            <h3 class="article-list-title">
+                                <a href="#">New Zero-Day Vulnerability in Windows 12 Actively Exploited — Patch Now</a>
+                            </h3>
+                            <div class="article-list-meta">Security · March 30, 2026 · 2 min read</div>
+                        </div>
+                    </article>
+
+                    <article class="article-list-item">
+                        <img src="assets/ps6.jpg" alt="Gaming setup" width="160" height="100">
+                        <div class="article-list-body">
+                            <h3 class="article-list-title">
+                                <a href="#">PlayStation 6 Officially Confirmed — Launching November 2026</a>
+                            </h3>
+                            <div class="article-list-meta">Gaming · March 29, 2026 · 2 min read</div>
+                        </div>
+                    </article>
+
+                    <article class="article-list-item">
+                        <img src="assets/gpt_5.webp" alt="AI conversation interface" width="160" height="100">
+                        <div class="article-list-body">
+                            <h3 class="article-list-title">
+                                <a href="#">OpenAI Launches GPT-5 Turbo With Real-Time Browser Integration</a>
+                            </h3>
+                            <div class="article-list-meta">AI · March 28, 2026 · 4 min read</div>
+                        </div>
+                    </article>
+
+                    <article class="article-list-item">
+                        <img src="assets/perovskite.jpg" alt="Solar panels" width="160" height="100">
+                        <div class="article-list-body">
+                            <h3 class="article-list-title">
+                                <a href="#">New Perovskite Solar Cell Breaks Efficiency Record at 41.3%</a>
+                            </h3>
+                            <div class="article-list-meta">Science · March 27, 2026 · 3 min read</div>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </main>
+
+        <aside class="flex flex-col gap-8">
+
+            <!-- Trending -->
+            <section>
+                <h2 class="text-xs font-bold tracking-widest uppercase text-gray-500 border-b-2 border-teal-700 pb-2 mb-4">Trending</h2>
+                <ol class="flex flex-col divide-y divide-gray-200">
+                    <li class="flex gap-3 items-start py-3">
+                        <span class="text-2xl font-bold text-gray-200 w-7 leading-none shrink-0">01</span>
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800 leading-snug">
+                                <a href="#" class="hover:text-teal-700">Quantum Computer Cracks RSA-2048 in 18 Minutes</a>
+                            </div>
+                            <div class="text-xs text-gray-400 mt-1">14,234 reads</div>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start py-3">
+                        <span class="text-2xl font-bold text-gray-200 w-7 leading-none shrink-0">02</span>
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800 leading-snug">
+                                <a href="#" class="hover:text-teal-700">EU Bans Facial Recognition in Public Spaces</a>
+                            </div>
+                            <div class="text-xs text-gray-400 mt-1">9,877 reads</div>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start py-3">
+                        <span class="text-2xl font-bold text-gray-200 w-7 leading-none shrink-0">03</span>
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800 leading-snug">
+                                <a href="#" class="hover:text-teal-700">Tesla Robotaxi Launches Commercial Service in Stockholm</a>
+                            </div>
+                            <div class="text-xs text-gray-400 mt-1">8,102 reads</div>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start py-3">
+                        <span class="text-2xl font-bold text-gray-200 w-7 leading-none shrink-0">04</span>
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800 leading-snug">
+                                <a href="#" class="hover:text-teal-700">Meta Quest 4 Leaked: Built-in Haptics and Eye-Tracking</a>
+                            </div>
+                            <div class="text-xs text-gray-400 mt-1">6,543 reads</div>
+                        </div>
+                    </li>
+                    <li class="flex gap-3 items-start py-3">
+                        <span class="text-2xl font-bold text-gray-200 w-7 leading-none shrink-0">05</span>
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800 leading-snug">
+                                <a href="#" class="hover:text-teal-700">Linus Torvalds Comments on Rust Integration in Linux 7.0</a>
+                            </div>
+                            <div class="text-xs text-gray-400 mt-1">5,290 reads</div>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Most read -->
+            <section>
+                <h2 class="text-xs font-bold tracking-widest uppercase text-gray-500 border-b-2 border-teal-700 pb-2 mb-4">Most Read</h2>
+                <div class="flex flex-col divide-y divide-gray-200">
+
+                    <article class="flex gap-3 items-start py-3">
+                        <img src="assets/amd_ryzen.jpg" alt="Article image" class="w-16 h-12 object-cover rounded shrink-0" width="72" height="54">
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800 leading-snug">
+                                <a href="#" class="hover:text-teal-700">AMD Ryzen 9 9950X3D Tested: Breaks Every Gaming Record</a>
+                            </div>
+                            <div class="text-xs text-gray-400 mt-1">Hardware · April 1, 2026</div>
+                        </div>
+                    </article>
+
+                    <article class="flex gap-3 items-start py-3">
+                        <img src="assets/kmp.jpeg" alt="Article image" class="w-16 h-12 object-cover rounded shrink-0" width="72" height="54">
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800 leading-snug">
+                                <a href="#" class="hover:text-teal-700">How Kotlin Multiplatform Is Changing Mobile Development in 2026</a>
+                            </div>
+                            <div class="text-xs text-gray-400 mt-1">Development · March 30, 2026</div>
+                        </div>
+                    </article>
+
+                    <article class="flex gap-3 items-start py-3">
+                        <img src="assets/rtx_6090.jpg" alt="Article image" class="w-16 h-12 object-cover rounded shrink-0" width="72" height="54">
+                        <div>
+                            <div class="text-sm font-semibold text-gray-800 leading-snug">
+                                <a href="#" class="hover:text-teal-700">Nvidia GeForce RTX 6090 Review: A New Era for PC Gaming</a>
+                            </div>
+                            <div class="text-xs text-gray-400 mt-1">Hardware · March 28, 2026</div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Topics -->
+            <section>
+                <h2 class="text-xs font-bold tracking-widest uppercase text-gray-500 border-b-2 border-teal-700 pb-2 mb-4">Topics</h2>
+                <div class="flex flex-wrap gap-2">
+                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">AI</a>
+                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">Security</a>
+                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">Android</a>
+                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">iPhone</a>
+                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">Gaming</a>
+                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">Space</a>
+                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">Quantum</a>
+                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">Linux</a>
+                </div>
+            </section>
+
+        </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t-2 border-gray-200 mt-4">
+
+        <div class="max-w-5xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10">
+
+            <div>
+                <div class="text-xl font-bold text-teal-700 mb-2">TechNews</div>
+                <p class="text-sm text-gray-500 leading-relaxed mb-5">
+                    Independent tech journalism since 2010. We cover AI, hardware,
+                    science, and digital culture.
+                </p>
+                <div class="flex gap-2">
+                    <!-- X / Twitter -->
+                    <a href="#" class="flex items-center gap-2 text-sm font-semibold text-gray-600 border border-gray-200 rounded px-3 py-1.5 w-fit hover:text-teal-700 hover:border-teal-700 hover:bg-teal-50">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.629L18.243 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="#" class="flex items-center gap-2 text-sm font-semibold text-gray-600 border border-gray-200 rounded px-3 py-1.5 w-fit hover:text-teal-700 hover:border-teal-700 hover:bg-teal-50">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="#" class="flex items-center gap-2 text-sm font-semibold text-gray-600 border border-gray-200 rounded px-3 py-1.5 w-fit hover:text-teal-700 hover:border-teal-700 hover:bg-teal-50">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="#" class="flex items-center gap-2 text-sm font-semibold text-gray-600 border border-gray-200 rounded px-3 py-1.5 w-fit hover:text-teal-700 hover:border-teal-700 hover:bg-teal-50">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="#" class="flex items-center gap-2 text-sm font-semibold text-gray-600 border border-gray-200 rounded px-3 py-1.5 w-fit hover:text-teal-700 hover:border-teal-700 hover:bg-teal-50">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div>
+                <h3 class="text-xs font-bold tracking-widest uppercase text-gray-500 border-b-2 border-teal-700 pb-2 mb-4">Categories</h3>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Technology</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">AI &amp; Future</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Gaming</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Science</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Hardware</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Security</a></li>
+                </ul>
+            </div>
+
+            <!-- About -->
+            <div>
+                <h3 class="text-xs font-bold tracking-widest uppercase text-gray-500 border-b-2 border-teal-700 pb-2 mb-4">About</h3>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">The Newsroom</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Advertise</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Newsletter</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Contact</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Work With Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Reader Services -->
+            <div>
+                <h3 class="text-xs font-bold tracking-widest uppercase text-gray-500 border-b-2 border-teal-700 pb-2 mb-4">Reader Services</h3>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Send a Tip</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Report an Error</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">RSS Feed</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Apps</a></li>
+                    <li><a href="#" class="text-sm text-gray-500 hover:text-teal-700">Archive</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="border-t border-gray-100">
+            <div class="max-w-5xl mx-auto px-6 py-4 flex flex-wrap items-center justify-between gap-3 text-xs text-gray-400">
+                <span>&copy; 2026 TechNews. All rights reserved.</span>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-teal-700">Privacy Policy</a>
+                    <a href="#" class="hover:text-teal-700">Cookie Policy</a>
+                    <a href="#" class="hover:text-teal-700">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
