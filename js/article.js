@@ -1,20 +1,11 @@
-function getArticles() {
-    return JSON.parse(localStorage.getItem('technews_articles') || '[]');
-}
+import { getComments, saveComments } from './helpers/comments.js';
+import { getReactions, saveReactions } from './helpers/reactions.js';
+import { getArticles } from './helpers/articles.js';
+import { showToast } from './helpers/toast.js';
 
 function getIdFromURL() {
     var params = new URLSearchParams(window.location.search);
     return Number(params.get('id'));
-}
-
-// Likes/dislikes
-function getReactions(id) {
-    var key = 'technews_reactions_' + id;
-    return JSON.parse(localStorage.getItem(key) || '{"likes":0,"dislikes":0}');
-}
-
-function saveReactions(id, data) {
-    localStorage.setItem('technews_reactions_' + id, JSON.stringify(data));
 }
 
 function renderReactions(id) {
@@ -65,15 +56,6 @@ function renderReactions(id) {
 
     bar.appendChild(likeBtn);
     bar.appendChild(dislikeBtn);
-}
-
-// Comments
-function getComments(id) {
-    return JSON.parse(localStorage.getItem('technews_comments_' + id) || '[]');
-}
-
-function saveComments(id, comments) {
-    localStorage.setItem('technews_comments_' + id, JSON.stringify(comments));
 }
 
 function buildComment(comment) {

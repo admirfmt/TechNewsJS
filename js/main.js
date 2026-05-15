@@ -1,10 +1,5 @@
-function getArticles() {
-    return JSON.parse(localStorage.getItem('technews_articles') || '[]');
-}
-
-function saveArticles(articles) {
-    localStorage.setItem('technews_articles', JSON.stringify(articles));
-}
+import { getArticles, saveArticles } from './helpers/articles.js';
+import { showToast } from './helpers/toast.js';
 
 function getExcerpt(text, max = 60) {
     return text.length > max ? text.slice(0, max) + '...' : text;
