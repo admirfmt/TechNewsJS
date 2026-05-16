@@ -1,12 +1,18 @@
 import { getArticles, saveArticles } from './helpers/articles.js';
 import { showToast } from './helpers/toast.js';
 
-function getExcerpt(text, max = 60) {
-    return text.length > max ? text.slice(0, max) + '...' : text;
+function getExcerpt(text, max) {
+  if (max === undefined) max = 60;
+  return text.length > max ? text.slice(0, max) + '...' : text;
 }
 
 function buildCard(article) {
-    var card = document.createElement('div');
+  // cut content to 60 chars for preview
+  var rawText = article.content;
+  var cut = rawText.slice(0, 60);
+  var final = rawText.length > 60 ? cut + '...' : rawText;
+  
+  var card = document.createElement('div');
     card.className = 'dyn-article-card';
     card.style.cursor = 'pointer';
 
@@ -38,8 +44,8 @@ function buildCard(article) {
     header.appendChild(deleteBtn);
 
     var excerptEl = document.createElement('p');
-    excerptEl.className = 'article-card-excerpt';
-    excerptEl.textContent = getExcerpt(article.content);
+    excerptEl.className = 'article-excerpt';
+    excerptEl.textContent = final;
 
     var meta = document.createElement('div');
     meta.className = 'text-sm text-gray-400 mt-1';

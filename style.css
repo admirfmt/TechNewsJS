@@ -99,6 +99,8 @@ img {
     color: #555;
     line-height: 1.6;
     margin-bottom: 12px;
+    overflow: hidden;
+    word-break: break-word;
 }
 
 .article-meta {
@@ -398,6 +400,7 @@ img {
   color: #111;
   line-height: 1.25;
   margin: 8px 0 12px;
+  word-break: break-word;
 }
 
 .article-full-meta {
@@ -417,6 +420,8 @@ img {
   color: #333;
   line-height: 1.8;
   white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* ── Reactions ── */
@@ -538,6 +543,8 @@ img {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  overflow: hidden;
+  min-width: none;
 }
 
 .dyn-card-header {
