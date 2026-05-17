@@ -1,10 +1,8 @@
+import { mostReadArticles } from './data/mostReadArticles.js';
+import { topicsArticles } from './data/topicsArticles.js';
+import { trendingArticles } from './data/trendingArticles.js';
 import { getArticles, saveArticles } from './helpers/articles.js';
 import { showToast } from './helpers/toast.js';
-
-function getExcerpt(text, max) {
-  if (max === undefined) max = 60;
-  return text.length > max ? text.slice(0, max) + '...' : text;
-}
 
 function buildCard(article) {
   // cut content to 60 chars for preview
@@ -85,6 +83,92 @@ function renderArticles() {
     }
 }
 
+function renderTrendingArticles() {
+  var list = document.getElementById('trending-list');
+  if (!list) return;
+
+  trendingArticles.forEach(function(item, index) {
+    var li = document.createElement('li');
+    li.className = 'flex gap-3 items-start py-3';
+
+    var num = document.createElement('span');
+    num.className = 'text-2xl font-bold text-gray-200 w-7 leading-none shrink-0';
+    num.textContent = String(index + 1).padStart(2, '0');
+
+    var inner = document.createElement('div');
+
+    var titleEl = document.createElement('div');
+    titleEl.className = 'text-sm font-semibold text-gray-800 leading-snug';
+    var link = document.createElement('a');
+    link.href = '#';
+    link.className = 'hover:text-teal-700';
+    link.textContent = item.title;
+    titleEl.appendChild(link);
+
+    var reads = document.createElement('div');
+    reads.className = 'text-xs text-gray-400 mt-1';
+    reads.textContent = item.reads + ' reads';
+
+    inner.appendChild(titleEl);
+    inner.appendChild(reads);
+
+    li.appendChild(num);
+    li.appendChild(inner);
+    list.appendChild(li);
+  });
+}
+
+function renderMostReadArticles() {
+  var container = document.getElementById('most-read-list');
+  if (!container) return;
+
+  mostReadArticles.forEach(function(item) {
+    var article = document.createElement('article');
+    article.className = 'flex gap-3 items-start py-3';
+
+    var img = document.createElement('img');
+    img.src = item.img;
+    img.alt = 'Article image';
+    img.className = 'w-16 h-12 object-cover rounded shrink-0';
+    img.width = 72;
+    img.height = 54;
+
+    var inner = document.createElement('div');
+
+    var titleEl = document.createElement('div');
+    titleEl.className = 'text-sm font-semibold text-gray-800 leading-snug';
+    var link = document.createElement('a');
+    link.href = '#';
+    link.className = 'hover:text-teal-700';
+    link.textContent = item.title;
+    titleEl.appendChild(link);
+
+    var meta = document.createElement('div');
+    meta.className = 'text-xs text-gray-400 mt-1';
+    meta.textContent = item.meta;
+
+    inner.appendChild(titleEl);
+    inner.appendChild(meta);
+
+    article.appendChild(img);
+    article.appendChild(inner);
+    container.appendChild(article);
+  });
+}
+
+function renderTopicsArticles() {
+  var container = document.getElementById('topics-list');
+  if (!container) return;
+
+  topicsArticles.forEach(function(topic) {
+    var a = document.createElement('a');
+    a.href = '#';
+    a.className = 'text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50';
+    a.textContent = topic;
+    container.appendChild(a);
+  });
+}
+
 function createArticle(title, content, category) {
     var articles = getArticles();
     var article = {
@@ -121,6 +205,9 @@ function closeModal() {
 document.addEventListener('DOMContentLoaded', function() {
   
     renderArticles();
+    renderMostReadArticles();
+    renderTopicsArticles();
+    renderTrendingArticles();
 
     document.getElementById('open-modal-btn').addEventListener('click', openModal);
     document.getElementById('close-modal-btn').addEventListener('click', closeModal);

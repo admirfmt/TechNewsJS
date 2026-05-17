@@ -68,106 +68,19 @@
             <!-- Trending -->
             <section>
                 <h2 class="text-xs font-bold tracking-widest uppercase text-gray-500 border-b-2 border-teal-700 pb-2 mb-4">Trending</h2>
-                <ol class="flex flex-col divide-y divide-gray-200">
-                    <li class="flex gap-3 items-start py-3">
-                        <span class="text-2xl font-bold text-gray-200 w-7 leading-none shrink-0">01</span>
-                        <div>
-                            <div class="text-sm font-semibold text-gray-800 leading-snug">
-                                <a href="#" class="hover:text-teal-700">Quantum Computer Cracks RSA-2048 in 18 Minutes</a>
-                            </div>
-                            <div class="text-xs text-gray-400 mt-1">14,234 reads</div>
-                        </div>
-                    </li>
-                    <li class="flex gap-3 items-start py-3">
-                        <span class="text-2xl font-bold text-gray-200 w-7 leading-none shrink-0">02</span>
-                        <div>
-                            <div class="text-sm font-semibold text-gray-800 leading-snug">
-                                <a href="#" class="hover:text-teal-700">EU Bans Facial Recognition in Public Spaces</a>
-                            </div>
-                            <div class="text-xs text-gray-400 mt-1">9,877 reads</div>
-                        </div>
-                    </li>
-                    <li class="flex gap-3 items-start py-3">
-                        <span class="text-2xl font-bold text-gray-200 w-7 leading-none shrink-0">03</span>
-                        <div>
-                            <div class="text-sm font-semibold text-gray-800 leading-snug">
-                                <a href="#" class="hover:text-teal-700">Tesla Robotaxi Launches Commercial Service in Stockholm</a>
-                            </div>
-                            <div class="text-xs text-gray-400 mt-1">8,102 reads</div>
-                        </div>
-                    </li>
-                    <li class="flex gap-3 items-start py-3">
-                        <span class="text-2xl font-bold text-gray-200 w-7 leading-none shrink-0">04</span>
-                        <div>
-                            <div class="text-sm font-semibold text-gray-800 leading-snug">
-                                <a href="#" class="hover:text-teal-700">Meta Quest 4 Leaked: Built-in Haptics and Eye-Tracking</a>
-                            </div>
-                            <div class="text-xs text-gray-400 mt-1">6,543 reads</div>
-                        </div>
-                    </li>
-                    <li class="flex gap-3 items-start py-3">
-                        <span class="text-2xl font-bold text-gray-200 w-7 leading-none shrink-0">05</span>
-                        <div>
-                            <div class="text-sm font-semibold text-gray-800 leading-snug">
-                                <a href="#" class="hover:text-teal-700">Linus Torvalds Comments on Rust Integration in Linux 7.0</a>
-                            </div>
-                            <div class="text-xs text-gray-400 mt-1">5,290 reads</div>
-                        </div>
-                    </li>
-                </ol>
+                <ol id="trending-list"="flex flex-col divide-y divide-gray-200"></ol>
             </section>
 
             <!-- Most read -->
             <section>
                 <h2 class="text-xs font-bold tracking-widest uppercase text-gray-500 border-b-2 border-teal-700 pb-2 mb-4">Most Read</h2>
-                <div class="flex flex-col divide-y divide-gray-200">
-
-                    <article class="flex gap-3 items-start py-3">
-                        <img src="assets/amd_ryzen.jpg" alt="Article image" class="w-16 h-12 object-cover rounded shrink-0" width="72" height="54">
-                        <div>
-                            <div class="text-sm font-semibold text-gray-800 leading-snug">
-                                <a href="#" class="hover:text-teal-700">AMD Ryzen 9 9950X3D Tested: Breaks Every Gaming Record</a>
-                            </div>
-                            <div class="text-xs text-gray-400 mt-1">Hardware · April 1, 2026</div>
-                        </div>
-                    </article>
-
-                    <article class="flex gap-3 items-start py-3">
-                        <img src="assets/kmp.jpeg" alt="Article image" class="w-16 h-12 object-cover rounded shrink-0" width="72" height="54">
-                        <div>
-                            <div class="text-sm font-semibold text-gray-800 leading-snug">
-                                <a href="#" class="hover:text-teal-700">How Kotlin Multiplatform Is Changing Mobile Development in 2026</a>
-                            </div>
-                            <div class="text-xs text-gray-400 mt-1">Development · March 30, 2026</div>
-                        </div>
-                    </article>
-
-                    <article class="flex gap-3 items-start py-3">
-                        <img src="assets/rtx_6090.jpg" alt="Article image" class="w-16 h-12 object-cover rounded shrink-0" width="72" height="54">
-                        <div>
-                            <div class="text-sm font-semibold text-gray-800 leading-snug">
-                                <a href="#" class="hover:text-teal-700">Nvidia GeForce RTX 6090 Review: A New Era for PC Gaming</a>
-                            </div>
-                            <div class="text-xs text-gray-400 mt-1">Hardware · March 28, 2026</div>
-                        </div>
-                    </article>
-
-                </div>
+                <div id="most-read-list" class="flex flex-col divide-y divide-gray-200"></div>
             </section>
 
             <!-- Topics -->
             <section>
                 <h2 class="text-xs font-bold tracking-widest uppercase text-gray-500 border-b-2 border-teal-700 pb-2 mb-4">Topics</h2>
-                <div class="flex flex-wrap gap-2">
-                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">AI</a>
-                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">Security</a>
-                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">Android</a>
-                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">iPhone</a>
-                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">Gaming</a>
-                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">Space</a>
-                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">Quantum</a>
-                    <a href="#" class="text-xs font-semibold px-3 py-1 border border-gray-300 rounded-full text-gray-500 hover:border-teal-700 hover:text-teal-700 hover:bg-teal-50">Linux</a>
-                </div>
+                <div id="topics-list" class="flex flex-wrap gap-2"></div>
             </section>
 
         </aside>
@@ -271,41 +184,41 @@
 
     </footer>
     <!-- Create article modal -->
-  <div id="modal" class="fixed z-[200] flex items-center justify-center p-4 inset-0 hidden">
-    <div class="modal-box">
-      <div class="modal-header">
-        <h2 class="text-lg font-bold text-[#222]">New Article</h2>
-        <button id="close-modal-btn" class="modal-close">&times;</button>
-      </div>
-      <form id="article-form">
-        <div class="form-group">
-          <label for="article-title">Title <span class="required">*</span></label>
-          <input type="text" id="article-title" placeholder="Enter article title" maxlength="120" required>
+    <div id="modal" class="fixed z-[200] flex items-center justify-center p-4 inset-0 hidden">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2 class="text-lg font-bold text-[#222]">New Article</h2>
+                <button id="close-modal-btn" class="modal-close">&times;</button>
+            </div>
+            <form id="article-form">
+                <div class="form-group">
+                    <label for="article-title">Title <span class="required">*</span></label>
+                    <input type="text" id="article-title" placeholder="Enter article title" maxlength="120" required>
+                </div>
+                <div class="form-group">
+                    <label for="article-content">Content <span class="required">*</span></label>
+                    <textarea id="article-content" rows="5" placeholder="Write article content..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="article-category">Category</label>
+                    <select id="article-category">
+                        <option value="Technology">Technology</option>
+                        <option value="AI & Future">AI &amp; Future</option>
+                        <option value="Gaming">Gaming</option>
+                        <option value="Science">Science</option>
+                        <option value="Hardware">Hardware</option>
+                        <option value="Security">Security</option>
+                        <option value="Space">Space</option>
+                        <option value="Opinion">Opinion</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" id="cancel-btn" class="btn-secondary">Cancel</button>
+                    <button type="submit" class="btn-primary">Publish Article</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group">
-          <label for="article-content">Content <span class="required">*</span></label>
-          <textarea id="article-content" rows="5" placeholder="Write article content..." required></textarea>
-        </div>
-        <div class="form-group">
-          <label for="article-category">Category</label>
-          <select id="article-category">
-            <option value="Technology">Technology</option>
-            <option value="AI & Future">AI &amp; Future</option>
-            <option value="Gaming">Gaming</option>
-            <option value="Science">Science</option>
-            <option value="Hardware">Hardware</option>
-            <option value="Security">Security</option>
-            <option value="Space">Space</option>
-            <option value="Opinion">Opinion</option>
-          </select>
-        </div>
-        <div class="modal-actions">
-          <button type="button" id="cancel-btn" class="btn-secondary">Cancel</button>
-          <button type="submit" class="btn-primary">Publish Article</button>
-        </div>
-      </form>
     </div>
-  </div>
 
 </body>
 
