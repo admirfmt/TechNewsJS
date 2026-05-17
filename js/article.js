@@ -60,17 +60,17 @@ function renderReactions(id) {
 
 function buildComment(comment) {
     var item = document.createElement('div');
-    item.className = 'comment-item';
+    item.className = 'bg-white border mb-3 px-4 py-3.5 rounded-md border-solid border-grey-400';
 
     var header = document.createElement('div');
-    header.className = 'comment-header';
+    header.className = 'flex justify-between items-center mb-1.5';
 
     var author = document.createElement('span');
     author.className = 'comment-author';
     author.textContent = comment.author || 'Anonymous';
 
     var date = document.createElement('span');
-    date.className = 'comment-date';
+    date.className = 'text-xs text-gray-400';
     date.textContent = comment.date;
 
     header.appendChild(author);

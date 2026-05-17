@@ -13,11 +13,11 @@ function buildCard(article) {
   var final = rawText.length > 60 ? cut + '...' : rawText;
   
   var card = document.createElement('div');
-    card.className = 'dyn-article-card';
+    card.className = 'bg-white border flex flex-col gap-2 overflow-hidden min-w-[none] mb-4 px-6 py-5 rounded-md border-solid border-gray-200';
     card.style.cursor = 'pointer';
 
     var header = document.createElement('div');
-    header.className = 'dyn-card-header';
+    header.className = 'flex items-start justify-between gap-3';
 
     var left = document.createElement('div');
 
